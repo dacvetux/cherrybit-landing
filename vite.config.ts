@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite'
-import path from 'path'
-import tailwindcss from '@tailwindcss/vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import path from 'path';
+import tailwindcss from '@tailwindcss/vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [
@@ -17,6 +17,9 @@ export default defineConfig({
     },
   },
 
+  // Required for GitHub Pages deployment under a subpath
+  base: '/cherrybit-landing/',
+
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
   assetsInclude: ['**/*.svg', '**/*.csv'],
-})
+});

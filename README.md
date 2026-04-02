@@ -1,11 +1,15 @@
+# B2B SaaS Landing Page Design
 
-  # B2B SaaS Landing Page Design
+## Running the code
 
-  This is a code bundle for B2B SaaS Landing Page Design. The original project is available at https://www.figma.com/design/ZlFEXvKzBZwZHYzwtj4MmG/B2B-SaaS-Landing-Page-Design.
+Run `npm i` to install the dependencies.
 
-  ## Running the code
+Run `npm run dev` to start the development server.
 
-  Run `npm i` to install the dependencies.
+---
 
-  Run `npm run dev` to start the development server.
-  
+This repo is configured for GitHub Pages deployment through GitHub Actions.
+
+Expected live URL:
+
+https://dacvetux.github.io/cherrybit-landing/
