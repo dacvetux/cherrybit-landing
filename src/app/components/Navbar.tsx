@@ -89,7 +89,11 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/logo_text.png" alt="CherryBit" className="h-10 w-auto" />
+            <img
+              src={`${import.meta.env.BASE_URL}logo_text.png`}
+              alt="CherryBit"
+              className="h-10 w-auto"
+            />
           </div>
 
           {/* Desktop menu */}

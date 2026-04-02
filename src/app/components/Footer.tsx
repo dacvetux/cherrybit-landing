@@ -13,7 +13,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="mb-4">
               <img
-                src="/logo 2.png"
+                src={`${import.meta.env.BASE_URL}logo.png`}
                 alt="CherryBit"
                 className="h-10 w-auto brightness-0 invert"
               />
