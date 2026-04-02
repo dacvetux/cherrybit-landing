@@ -1,24 +1,11 @@
-# CherryBit Landing
 
-Minimal React + Vite landing page prepared for GitHub Pages.
+  # B2B SaaS Landing Page Design
 
-## Local development
+  This is a code bundle for B2B SaaS Landing Page Design. The original project is available at https://www.figma.com/design/ZlFEXvKzBZwZHYzwtj4MmG/B2B-SaaS-Landing-Page-Design.
 
-```bash
-npm install
-npm run dev
-```
+  ## Running the code
 
-## Build
+  Run `npm i` to install the dependencies.
 
-```bash
-npm run build
-```
-
-## GitHub Pages
-
-This repo is configured for GitHub Pages deployment through GitHub Actions.
-
-Expected live URL:
-
-`https://dacvetux.github.io/cherrybit-landing/`
+  Run `npm run dev` to start the development server.
+  
