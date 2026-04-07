@@ -222,38 +222,41 @@ process: {
     },
   ],
 },
-  contact: {
-    heading: "Let's talk about your operations",
-    body: "Ready to optimize your workflows? Fill out the form below and we'll get back to you within 24 hours.",
-    nameLabel: 'Your Name',
-    namePlaceholder: 'John Doe',
-    emailLabel: 'Email Address',
-    emailPlaceholder: 'john@company.com',
-    companyLabel: 'Company Name',
-    companyPlaceholder: 'Your Company Inc.',
-    messageLabel: 'Tell us about your project',
-    messagePlaceholder:
-      'What challenges are you facing? What would you like to improve?',
-    submit: 'Send Message',
-    nextHeading: 'What happens next?',
-    step1Title: 'We review your request',
-    step1Body: 'Our team analyzes your needs and identifies the best approach.',
-    step2Title: 'Schedule a discovery call',
-    step2Body:
-      'We set up a 30-minute call to dive deeper into your operations.',
-    step3Title: 'Receive a tailored proposal',
-    step3Body: 'Get a custom roadmap with clear deliverables and timelines.',
-    responseTitle: 'Typical response time',
-    responseUnit: 'hours',
-    responseBody: 'We typically respond within one business day, often sooner.',
-    testimonialBody:
-      '"Working with CherryBit transformed our operations. They didn\'t just consult—they built the tools we needed and trained our team to use them."',
-    testimonialName: 'Sarah Chen',
-    testimonialRole: 'COO, TechFlow Inc.',
-    successMessage: "Message sent! We'll be in touch within 24 hours.",
-    errorMessage:
-      'Something went wrong. Please try again or email us directly.',
-  },
+contact: {
+  heading: "Let's talk about where your operations create friction",
+  body: "If you are dealing with inefficient workflows, unclear ownership, manual coordination or AI questions, send us a short note. We will come back with a concrete next step.",
+  nameLabel: 'Your Name',
+  namePlaceholder: 'John Doe',
+  emailLabel: 'Email Address',
+  emailPlaceholder: 'john@company.com',
+  companyLabel: 'Company Name',
+  companyPlaceholder: 'Your Company',
+  messageLabel: 'What would you like to improve?',
+  messagePlaceholder:
+    'Describe your workflow, operational or digital challenge in a few sentences.',
+  submit: 'Send Inquiry',
+  nextHeading: 'What happens next?',
+  step1Title: 'We review your situation',
+  step1Body:
+    'We look at your message and identify where CherryBit can create the most value.',
+  step2Title: 'We align on the right focus',
+  step2Body:
+    'We suggest the most relevant next step, whether that is a diagnostic call, assessment or delivery discussion.',
+  step3Title: 'You get a concrete direction',
+  step3Body:
+    'You receive a clearer view of what to improve, what to prioritise and how to move forward.',
+  responseTitle: 'Typical response time',
+  responseUnit: 'hours',
+  responseBody:
+    'We usually respond within one business day, often sooner.',
+  testimonialBody:
+    '"CherryBit helped us turn scattered operational issues into a clearer structure, better workflows and a realistic implementation path."',
+  testimonialName: 'Example client quote',
+  testimonialRole: 'B2B operations team',
+  successMessage: "Your inquiry has been sent. We'll get back to you shortly.",
+  errorMessage:
+    'Something went wrong. Please try again or contact us directly.',
+},
   finalCta: {
     heading1: "Let's improve how your",
     heading2: 'business operates',
@@ -403,37 +406,41 @@ process: {
     },
   ],
 },
-  contact: {
-    heading: 'Pogovorimo se o vaših operacijah',
-    body: 'Pripravljeni optimizirati vaše delovne tokove? Izpolnite spodnji obrazec in odgovorili vam bomo v 24 urah.',
-    nameLabel: 'Vaše ime',
-    namePlaceholder: 'Janez Novak',
-    emailLabel: 'E-poštni naslov',
-    emailPlaceholder: 'janez@podjetje.si',
-    companyLabel: 'Ime podjetja',
-    companyPlaceholder: 'Vaše podjetje d.o.o.',
-    messageLabel: 'Povejte nam o vašem projektu',
-    messagePlaceholder: 'S kakšnimi izzivi se soočate? Kaj bi radi izboljšali?',
-    submit: 'Pošlji sporočilo',
-    nextHeading: 'Kaj se zgodi naprej?',
-    step1Title: 'Pregledamo vašo zahtevo',
-    step1Body:
-      'Naša ekipa analizira vaše potrebe in identificira najboljši pristop.',
-    step2Title: 'Dogovorimo se za odkrivalni klic',
-    step2Body: 'Organiziramo 30-minutni klic za poglobitev v vaše operacije.',
-    step3Title: 'Prejmete prilagojeno ponudbo',
-    step3Body: 'Pridobite prilagojen načrt z jasnimi rezultati in časovnicami.',
-    responseTitle: 'Tipičen odzivni čas',
-    responseUnit: 'ur',
-    responseBody: 'Praviloma odgovorimo v enem delovnem dnevu, pogosto prej.',
-    testimonialBody:
-      '"Sodelovanje s CherryBit je transformiralo naše operacije. Niso samo svetovali – zgradili so orodja, ki smo jih potrebovali, in usposobili našo ekipo."',
-    testimonialName: 'Sarah Chen',
-    testimonialRole: 'COO, TechFlow Inc.',
-    successMessage: 'Sporočilo poslano! Odgovorili vam bomo v 24 urah.',
-    errorMessage:
-      'Nekaj je šlo narobe. Poskusite znova ali nam pišite neposredno.',
-  },
+contact: {
+  heading: 'Pogovorimo se o tem, kje v vaših operacijah nastaja trenje',
+  body: 'Če se soočate z neučinkovitimi workflowi, nejasnim ownershipom, preveč ročnega koordiniranja ali vprašanji glede AI, nam pošljite kratek opis. Odgovorimo vam s konkretnim naslednjim korakom.',
+  nameLabel: 'Vaše ime',
+  namePlaceholder: 'Janez Novak',
+  emailLabel: 'E-poštni naslov',
+  emailPlaceholder: 'janez@podjetje.si',
+  companyLabel: 'Ime podjetja',
+  companyPlaceholder: 'Vaše podjetje',
+  messageLabel: 'Kaj želite izboljšati?',
+  messagePlaceholder:
+    'V nekaj stavkih opišite vaš workflow, operativni ali digitalni izziv.',
+  submit: 'Pošlji povpraševanje',
+  nextHeading: 'Kaj se zgodi naprej?',
+  step1Title: 'Pregledamo vašo situacijo',
+  step1Body:
+    'Pregledamo vaše sporočilo in ocenimo, kje lahko CherryBit ustvari največ vrednosti.',
+  step2Title: 'Uskladimo pravi fokus',
+  step2Body:
+    'Predlagamo najprimernejši naslednji korak, naj bo to diagnostični klic, assessment ali pogovor o izvedbi.',
+  step3Title: 'Dobite konkretno usmeritev',
+  step3Body:
+    'Dobite jasnejši pogled na to, kaj izboljšati, kaj prioritetizirati in kako nadaljevati.',
+  responseTitle: 'Tipičen odzivni čas',
+  responseUnit: 'ur',
+  responseBody:
+    'Praviloma odgovorimo v enem delovnem dnevu, pogosto prej.',
+  testimonialBody:
+    '"CherryBit nam je pomagal razpršene operativne težave pretvoriti v bolj jasno strukturo, boljše workflowe in realistično pot do izvedbe."',
+  testimonialName: 'Primer izjave naročnika',
+  testimonialRole: 'B2B operativna ekipa',
+  successMessage: 'Vaše povpraševanje je poslano. Kmalu se vam oglasimo.',
+  errorMessage:
+    'Nekaj je šlo narobe. Poskusite znova ali nas kontaktirajte neposredno.',
+},
   finalCta: {
     heading1: 'Izboljšajmo, kako vaše',
     heading2: 'podjetje deluje',
@@ -583,42 +590,41 @@ process: {
     },
   ],
 },
-  contact: {
-    heading: 'Lassen Sie uns über Ihre Abläufe sprechen',
-    body: 'Bereit, Ihre Workflows zu optimieren? Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden.',
-    nameLabel: 'Ihr Name',
-    namePlaceholder: 'Max Mustermann',
-    emailLabel: 'E-Mail-Adresse',
-    emailPlaceholder: 'max@unternehmen.de',
-    companyLabel: 'Unternehmensname',
-    companyPlaceholder: 'Ihr Unternehmen GmbH',
-    messageLabel: 'Erzählen Sie uns von Ihrem Projekt',
-    messagePlaceholder:
-      'Welche Herausforderungen haben Sie? Was möchten Sie verbessern?',
-    submit: 'Nachricht senden',
-    nextHeading: 'Was passiert als nächstes?',
-    step1Title: 'Wir prüfen Ihre Anfrage',
-    step1Body:
-      'Unser Team analysiert Ihre Bedürfnisse und ermittelt den besten Ansatz.',
-    step2Title: 'Discovery-Call vereinbaren',
-    step2Body:
-      'Wir vereinbaren ein 30-minütiges Gespräch, um tiefer in Ihre Abläufe einzutauchen.',
-    step3Title: 'Maßgeschneidertes Angebot erhalten',
-    step3Body:
-      'Sie erhalten eine individuelle Roadmap mit klaren Lieferergebnissen und Zeitplänen.',
-    responseTitle: 'Typische Antwortzeit',
-    responseUnit: 'Stunden',
-    responseBody:
-      'Wir antworten in der Regel innerhalb eines Werktages, oft früher.',
-    testimonialBody:
-      '"Die Zusammenarbeit mit CherryBit hat unsere Abläufe transformiert. Sie haben nicht nur beraten – sie haben die Tools gebaut, die wir brauchten, und unser Team geschult."',
-    testimonialName: 'Sarah Chen',
-    testimonialRole: 'COO, TechFlow Inc.',
-    successMessage:
-      'Nachricht gesendet! Wir melden uns innerhalb von 24 Stunden.',
-    errorMessage:
-      'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.',
-  },
+contact: {
+  heading: 'Lassen Sie uns darüber sprechen, wo in Ihren Abläufen Reibung entsteht',
+  body: 'Wenn Sie mit ineffizienten Workflows, unklaren Verantwortlichkeiten, zu viel manueller Koordination oder Fragen rund um KI zu tun haben, schicken Sie uns eine kurze Nachricht. Wir melden uns mit einem konkreten nächsten Schritt.',
+  nameLabel: 'Ihr Name',
+  namePlaceholder: 'Max Mustermann',
+  emailLabel: 'E-Mail-Adresse',
+  emailPlaceholder: 'max@unternehmen.de',
+  companyLabel: 'Unternehmensname',
+  companyPlaceholder: 'Ihr Unternehmen',
+  messageLabel: 'Was möchten Sie verbessern?',
+  messagePlaceholder:
+    'Beschreiben Sie in wenigen Sätzen Ihre Workflow-, operative oder digitale Herausforderung.',
+  submit: 'Anfrage senden',
+  nextHeading: 'Was passiert als Nächstes?',
+  step1Title: 'Wir prüfen Ihre Situation',
+  step1Body:
+    'Wir sehen uns Ihre Nachricht an und identifizieren, wo CherryBit den größten Mehrwert schaffen kann.',
+  step2Title: 'Wir schärfen den richtigen Fokus',
+  step2Body:
+    'Wir schlagen den passendsten nächsten Schritt vor, ob Diagnostic Call, Assessment oder Gespräch zur Umsetzung.',
+  step3Title: 'Sie erhalten eine konkrete Richtung',
+  step3Body:
+    'Sie bekommen ein klareres Bild davon, was verbessert, priorisiert und wie weiter vorgegangen werden sollte.',
+  responseTitle: 'Typische Antwortzeit',
+  responseUnit: 'Stunden',
+  responseBody:
+    'In der Regel antworten wir innerhalb eines Werktages, oft früher.',
+  testimonialBody:
+    '"CherryBit hat uns geholfen, verstreute operative Probleme in eine klarere Struktur, bessere Workflows und einen realistischen Umsetzungsweg zu überführen."',
+  testimonialName: 'Beispielzitat eines Kunden',
+  testimonialRole: 'B2B Operations-Team',
+  successMessage: 'Ihre Anfrage wurde gesendet. Wir melden uns in Kürze.',
+  errorMessage:
+    'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.',
+},
   finalCta: {
     heading1: 'Lassen Sie uns verbessern, wie Ihr',
     heading2: 'Unternehmen arbeitet',
