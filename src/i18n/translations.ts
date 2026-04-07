@@ -114,29 +114,29 @@ const en: Translations = {
   bookCall: 'Book a Call',
   exploreServices: 'Explore Services',
 },
-  valueProp: {
-    heading1: 'From operational chaos to',
-    heading2: 'structured execution',
-    body: "Most consultants talk. We deliver. Working software, optimized workflows, and teams that actually understand what they're doing.",
-    benefits: [
-      {
-        title: 'Strategic & Tactical',
-        description: 'From high-level planning to hands-on implementation',
-      },
-      {
-        title: 'Execution-Focused',
-        description: 'We build, not just advise. Real tools, real workflows.',
-      },
-      {
-        title: 'Proven Systems',
-        description: 'Battle-tested frameworks adapted to your context',
-      },
-      {
-        title: 'AI-Native Approach',
-        description: 'Leverage modern AI where it actually adds value',
-      },
-    ],
-  },
+valueProp: {
+  heading1: 'From operational friction to',
+  heading2: 'execution clarity',
+  body: 'CherryBit combines operational consulting, process optimisation, AI strategy and digital delivery to help teams work with more clarity, less friction and better control.',
+  benefits: [
+    {
+      title: 'Business-first approach',
+      description: 'We start with operational reality, not with technology for its own sake.',
+    },
+    {
+      title: 'From diagnosis to delivery',
+      description: 'We assess the problem, define priorities and help implement the right solution.',
+    },
+    {
+      title: 'Practical AI',
+      description: 'We focus on AI use cases that improve support, knowledge and communication workflows.',
+    },
+    {
+      title: 'Clearer execution',
+      description: 'Better ownership, smoother handoffs and digital tools that support real daily work.',
+    },
+  ],
+},
 services: {
   heading: 'What we do',
   body: 'CherryBit helps companies improve operations, redesign workflows, introduce AI pragmatically and build digital tools that support everyday execution.',
@@ -293,32 +293,29 @@ const sl: Translations = {
   bookCall: 'Rezervirajte klic',
   exploreServices: 'Raziščite storitve',
 },
-  valueProp: {
-    heading1: 'Od operativnega kaosa do',
-    heading2: 'strukturirane izvedbe',
-    body: 'Večina svetovalcev samo govori. Mi dostavljamo. Delujoča programska oprema, optimizirani delovni tokovi in ekipe, ki dejansko razumejo, kaj počnejo.',
-    benefits: [
-      {
-        title: 'Strateško & Taktično',
-        description:
-          'Od visokokakovostnega načrtovanja do neposredne implementacije',
-      },
-      {
-        title: 'Osredotočeni na izvedbo',
-        description:
-          'Gradimo, ne le svetujemo. Resnična orodja, resnični delovni tokovi.',
-      },
-      {
-        title: 'Preizkušeni sistemi',
-        description: 'Preizkušeni okviri, prilagojeni vašemu kontekstu',
-      },
-      {
-        title: 'Pristop z AI',
-        description:
-          'Izkoristite sodobno AI tam, kjer dejansko prinaša vrednost',
-      },
-    ],
-  },
+valueProp: {
+  heading1: 'Od operativnih trenj do',
+  heading2: 'jasne izvedbe',
+  body: 'CherryBit združuje operativno svetovanje, optimizacijo procesov, AI strategijo in digitalno izvedbo, da ekipam pomaga do večje jasnosti, manj trenja in boljšega nadzora.',
+  benefits: [
+    {
+      title: 'Business-first pristop',
+      description: 'Začnemo pri operativni realnosti podjetja, ne pri tehnologiji sami zase.',
+    },
+    {
+      title: 'Od diagnoze do izvedbe',
+      description: 'Ocenimo problem, določimo prioritete in pomagamo izvesti pravo rešitev.',
+    },
+    {
+      title: 'Praktičen AI',
+      description: 'Osredotočamo se na AI use case-e, ki izboljšajo support, knowledge in komunikacijske workflowe.',
+    },
+    {
+      title: 'Bolj jasna izvedba',
+      description: 'Boljši ownership, bolj tekoče predaje dela in digitalna orodja za realno vsakodnevno delo.',
+    },
+  ],
+},
 services: {
   heading: 'Kaj počnemo',
   body: 'CherryBit pomaga podjetjem izboljšati operacije, preoblikovati workflowe, pragmatično uvajati AI in zgraditi digitalna orodja, ki podpirajo vsakodnevno izvedbo.',
@@ -474,31 +471,29 @@ const de: Translations = {
   bookCall: 'Gespräch buchen',
   exploreServices: 'Leistungen entdecken',
 },
-  valueProp: {
-    heading1: 'Vom operativen Chaos zur',
-    heading2: 'strukturierten Umsetzung',
-    body: 'Die meisten Berater reden. Wir liefern. Funktionierende Software, optimierte Workflows und Teams, die wirklich verstehen, was sie tun.',
-    benefits: [
-      {
-        title: 'Strategisch & Taktisch',
-        description: 'Von der Gesamtplanung bis zur konkreten Umsetzung',
-      },
-      {
-        title: 'Umsetzungsorientiert',
-        description:
-          'Wir bauen, beraten nicht nur. Echte Tools, echte Workflows.',
-      },
-      {
-        title: 'Bewährte Systeme',
-        description: 'Praxiserprobte Frameworks, angepasst an Ihren Kontext',
-      },
-      {
-        title: 'KI-nativer Ansatz',
-        description:
-          'Moderne KI dort einsetzen, wo sie wirklich Mehrwert schafft',
-      },
-    ],
-  },
+valueProp: {
+  heading1: 'Von operativer Reibung zu',
+  heading2: 'klarer Umsetzung',
+  body: 'CherryBit verbindet operative Beratung, Prozessoptimierung, KI-Strategie und digitale Umsetzung, damit Teams mit mehr Klarheit, weniger Reibung und besserer Kontrolle arbeiten können.',
+  benefits: [
+    {
+      title: 'Business-first-Ansatz',
+      description: 'Wir starten bei der operativen Realität des Unternehmens, nicht bei Technologie um ihrer selbst willen.',
+    },
+    {
+      title: 'Von der Diagnose zur Umsetzung',
+      description: 'Wir bewerten das Problem, setzen Prioritäten und helfen bei der Umsetzung der richtigen Lösung.',
+    },
+    {
+      title: 'Praktische KI',
+      description: 'Wir konzentrieren uns auf KI-Anwendungsfälle, die Support-, Knowledge- und Kommunikations-Workflows verbessern.',
+    },
+    {
+      title: 'Klarere Umsetzung',
+      description: 'Bessere Verantwortlichkeiten, reibungslosere Übergaben und digitale Werkzeuge für das reale Tagesgeschäft.',
+    },
+  ],
+},
 services: {
   heading: 'Was wir tun',
   body: 'CherryBit unterstützt Unternehmen dabei, Abläufe zu verbessern, Workflows neu zu gestalten, KI pragmatisch einzuführen und digitale Werkzeuge für die tägliche Umsetzung aufzubauen.',
