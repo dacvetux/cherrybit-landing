@@ -257,28 +257,28 @@ contact: {
   errorMessage:
     'Something went wrong. Please try again or contact us directly.',
 },
-  finalCta: {
-    heading1: "Let's improve how your",
-    heading2: 'business operates',
-    body: "Ready to move from strategy to execution? Book a call and we'll show you exactly how we can help.",
-    bookCall: 'Book a Call',
-    sendInquiry: 'Send Inquiry',
-  },
-  footer: {
-    tagline:
-      'Operations consulting, workflow optimization, and AI strategy that actually gets implemented.',
-    servicesHeading: 'Services',
-    s1: 'Operations',
-    s2: 'AI Strategy',
-    s3: 'Workflows',
-    s4: 'Development',
-    companyHeading: 'Company',
-    c1: 'About',
-    c2: 'Case Studies',
-    c3: 'Contact',
-    c4: 'Careers',
-    copyright: '© 2026 CherryBit. All rights reserved.',
-  },
+finalCta: {
+  heading1: "Let's improve how your",
+  heading2: 'business operates',
+  body: 'If your team needs clearer workflows, better operational structure, practical AI use cases or custom digital support, CherryBit can help you move from friction to execution.',
+  bookCall: 'Book a Call',
+  sendInquiry: 'Send Inquiry',
+},
+footer: {
+  tagline:
+    'Operational consulting, workflow optimisation, AI strategy and digital delivery for teams that need clarity and execution.',
+  servicesHeading: 'Services',
+  s1: 'Operations Consulting',
+  s2: 'AI Strategy',
+  s3: 'Workflow Optimisation',
+  s4: 'Digital Delivery',
+  companyHeading: 'CherryBit',
+  c1: 'About',
+  c2: 'Services',
+  c3: 'Contact',
+  c4: 'Inquiry',
+  copyright: '© 2026 CherryBit. All rights reserved.',
+},
 };
 
 const sl: Translations = {
@@ -441,28 +441,28 @@ contact: {
   errorMessage:
     'Nekaj je šlo narobe. Poskusite znova ali nas kontaktirajte neposredno.',
 },
-  finalCta: {
-    heading1: 'Izboljšajmo, kako vaše',
-    heading2: 'podjetje deluje',
-    body: 'Pripravljeni priti od strategije do izvedbe? Rezervirajte klic in pokazali vam bomo natanko, kako vam lahko pomagamo.',
-    bookCall: 'Rezervirajte klic',
-    sendInquiry: 'Pošljite povpraševanje',
-  },
-  footer: {
-    tagline:
-      'Operativno svetovanje, optimizacija delovnih tokov in AI strategija, ki se dejansko implementira.',
-    servicesHeading: 'Storitve',
-    s1: 'Operacije',
-    s2: 'AI Strategija',
-    s3: 'Delovni tokovi',
-    s4: 'Razvoj',
-    companyHeading: 'Podjetje',
-    c1: 'O nas',
-    c2: 'Primeri',
-    c3: 'Kontakt',
-    c4: 'Kariere',
-    copyright: '© 2026 CherryBit. Vse pravice pridržane.',
-  },
+finalCta: {
+  heading1: 'Izboljšajmo, kako vaše',
+  heading2: 'podjetje deluje',
+  body: 'Če vaša ekipa potrebuje bolj jasne workflowe, boljšo operativno strukturo, praktične AI use case-e ali prilagojeno digitalno podporo, CherryBit pomaga preiti od trenja do izvedbe.',
+  bookCall: 'Rezervirajte klic',
+  sendInquiry: 'Pošljite povpraševanje',
+},
+footer: {
+  tagline:
+    'Operativno svetovanje, optimizacija workflowev, AI strategija in digitalna izvedba za ekipe, ki potrebujejo jasnost in izvedbo.',
+  servicesHeading: 'Storitve',
+  s1: 'Operativno svetovanje',
+  s2: 'AI strategija',
+  s3: 'Optimizacija workflowev',
+  s4: 'Digitalna izvedba',
+  companyHeading: 'CherryBit',
+  c1: 'O nas',
+  c2: 'Storitve',
+  c3: 'Kontakt',
+  c4: 'Povpraševanje',
+  copyright: '© 2026 CherryBit. Vse pravice pridržane.',
+},
 };
 
 const de: Translations = {
@@ -625,28 +625,28 @@ contact: {
   errorMessage:
     'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.',
 },
-  finalCta: {
-    heading1: 'Lassen Sie uns verbessern, wie Ihr',
-    heading2: 'Unternehmen arbeitet',
-    body: 'Bereit, von der Strategie zur Umsetzung zu wechseln? Buchen Sie ein Gespräch und wir zeigen Ihnen genau, wie wir helfen können.',
-    bookCall: 'Gespräch buchen',
-    sendInquiry: 'Anfrage senden',
-  },
-  footer: {
-    tagline:
-      'Operations-Beratung, Workflow-Optimierung und KI-Strategie, die tatsächlich umgesetzt wird.',
-    servicesHeading: 'Leistungen',
-    s1: 'Operations',
-    s2: 'KI-Strategie',
-    s3: 'Workflows',
-    s4: 'Entwicklung',
-    companyHeading: 'Unternehmen',
-    c1: 'Über uns',
-    c2: 'Fallstudien',
-    c3: 'Kontakt',
-    c4: 'Karriere',
-    copyright: '© 2026 CherryBit. Alle Rechte vorbehalten.',
-  },
+finalCta: {
+  heading1: 'Lassen Sie uns verbessern, wie Ihr',
+  heading2: 'Unternehmen arbeitet',
+  body: 'Wenn Ihr Team klarere Workflows, eine bessere operative Struktur, praktische KI-Anwendungsfälle oder maßgeschneiderte digitale Unterstützung braucht, hilft CherryBit dabei, von Reibung zu Umsetzung zu kommen.',
+  bookCall: 'Gespräch buchen',
+  sendInquiry: 'Anfrage senden',
+},
+footer: {
+  tagline:
+    'Operative Beratung, Workflow-Optimierung, KI-Strategie und digitale Umsetzung für Teams, die Klarheit und Umsetzung brauchen.',
+  servicesHeading: 'Leistungen',
+  s1: 'Operations-Beratung',
+  s2: 'KI-Strategie',
+  s3: 'Workflow-Optimierung',
+  s4: 'Digitale Umsetzung',
+  companyHeading: 'CherryBit',
+  c1: 'Über uns',
+  c2: 'Leistungen',
+  c3: 'Kontakt',
+  c4: 'Anfrage',
+  copyright: '© 2026 CherryBit. Alle Rechte vorbehalten.',
+},
 };
 
 export const translations: Record<Language, Translations> = { en, sl, de };
