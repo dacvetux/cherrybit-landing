@@ -137,47 +137,47 @@ const en: Translations = {
       },
     ],
   },
-  services: {
-    heading: 'What we do',
-    body: 'End-to-end support for modern operations. Strategy, implementation, and everything in between.',
-    items: [
-      {
-        title: 'Operations Consulting',
-        description:
-          'Diagnose bottlenecks, redesign processes, and implement systems that scale with your team.',
-      },
-      {
-        title: 'Workflow Optimization',
-        description:
-          'Streamline how work flows through your organization. Less friction, more output.',
-      },
-      {
-        title: 'AI Strategy & Implementation',
-        description:
-          'Real AI integration—not hype. Custom models, automation, and intelligent tools.',
-      },
-      {
-        title: 'Custom Software Development',
-        description:
-          'Tailored tools built for your exact needs. From internal dashboards to client platforms.',
-      },
-      {
-        title: 'Data & Integration',
-        description:
-          'Connect your systems. Clean your data. Make everything talk to each other.',
-      },
-      {
-        title: 'Process Automation',
-        description:
-          'Automate repetitive work so your team can focus on what actually matters.',
-      },
-      {
-        title: 'Performance Metrics',
-        description:
-          'Set up dashboards and KPIs that give you real insight into what is working.',
-      },
-    ],
-  },
+services: {
+  heading: 'What we do',
+  body: 'CherryBit helps companies improve operations, redesign workflows, introduce AI pragmatically and build digital tools that support everyday execution.',
+  items: [
+    {
+      title: 'Operations & Workflow Consulting',
+      description:
+        'We assess operating models, service workflows, ownership structures and delivery logic to improve clarity, speed and control.',
+    },
+    {
+      title: 'Process Optimisation',
+      description:
+        'We identify bottlenecks, reduce friction between teams and redesign processes for more consistent execution.',
+    },
+    {
+      title: 'AI Strategy & Consulting',
+      description:
+        'We define practical AI use cases for support, knowledge and communication processes, with a clear business rationale.',
+    },
+    {
+      title: 'Digital Workflow Solutions',
+      description:
+        'We design and build internal tools, dashboards, portals and workflow applications that support daily operations.',
+    },
+    {
+      title: 'Custom Software Development',
+      description:
+        'We develop tailored software solutions for operational, service and product needs instead of forcing teams into generic tools.',
+    },
+    {
+      title: 'Front-End & UX Delivery',
+      description:
+        'We deliver clear, maintainable and workflow-oriented interfaces for business applications and internal systems.',
+    },
+    {
+      title: 'Communication Support',
+      description:
+        'We help structure messaging and communication around services, change initiatives and digital projects where clarity matters.',
+    },
+  ],
+},
   whyCherryBit: {
     headingPre: 'Why ',
     headingPost: '?',
@@ -319,47 +319,47 @@ const sl: Translations = {
       },
     ],
   },
-  services: {
-    heading: 'Kaj počnemo',
-    body: 'Celovita podpora za sodobne operacije. Strategija, implementacija in vse vmes.',
-    items: [
-      {
-        title: 'Operativno svetovanje',
-        description:
-          'Diagnosticiramo ozka grla, preoblikujemo procese in uvedemo sisteme, ki rastejo z vašo ekipo.',
-      },
-      {
-        title: 'Optimizacija delovnih tokov',
-        description:
-          'Poenostavimo pretok dela v vaši organizaciji. Manj trenja, več rezultatov.',
-      },
-      {
-        title: 'AI Strategija & Implementacija',
-        description:
-          'Resnična integracija AI – brez hype-a. Modeli po meri, avtomatizacija in pametna orodja.',
-      },
-      {
-        title: 'Razvoj programske opreme po meri',
-        description:
-          'Orodja, prilagojena vašim točnim potrebam. Od notranjih nadzornih plošč do platform za stranke.',
-      },
-      {
-        title: 'Podatki & Integracija',
-        description:
-          'Povežemo vaše sisteme. Očistimo podatke. Naredimo, da vse komunicira med seboj.',
-      },
-      {
-        title: 'Avtomatizacija procesov',
-        description:
-          'Avtomatiziramo ponavljajoče se delo, da se vaša ekipa lahko osredotoči na tisto, kar je resnično pomembno.',
-      },
-      {
-        title: 'Meritve uspešnosti',
-        description:
-          'Postavimo nadzorne plošče in KPI-je, ki vam dajo pravi vpogled v to, kaj deluje.',
-      },
-    ],
-  },
+services: {
+  heading: 'Kaj počnemo',
+  body: 'CherryBit pomaga podjetjem izboljšati operacije, preoblikovati workflowe, pragmatično uvajati AI in zgraditi digitalna orodja, ki podpirajo vsakodnevno izvedbo.',
+  items: [
+    {
+      title: 'Operativno svetovanje & workflow consulting',
+      description:
+        'Pregledamo operativne modele, servisne workflowe, ownership strukture in logiko izvedbe, da izboljšamo jasnost, hitrost in nadzor.',
+    },
+    {
+      title: 'Optimizacija procesov',
+      description:
+        'Prepoznamo ozka grla, zmanjšamo trenja med ekipami in preoblikujemo procese za bolj konsistentno izvedbo.',
+    },
+    {
+      title: 'AI strategija & svetovanje',
+      description:
+        'Opredelimo praktične AI use case-e za support, knowledge in komunikacijske procese z jasnim poslovnim razlogom.',
+    },
+    {
+      title: 'Digitalne workflow rešitve',
+      description:
+        'Načrtujemo in razvijamo interna orodja, dashboarde, portale in workflow aplikacije za podporo vsakodnevnim operacijam.',
+    },
+    {
+      title: 'Razvoj programske opreme po meri',
+      description:
+        'Razvijamo prilagojene programske rešitve za operativne, storitvene in produktne potrebe namesto prilagajanja dela generičnim orodjem.',
+    },
+    {
+      title: 'Front-end & UX izvedba',
+      description:
+        'Izdelujemo jasne, vzdrževane in workflow-usmerjene uporabniške vmesnike za poslovne aplikacije in interne sisteme.',
+    },
+    {
+      title: 'Komunikacijska podpora',
+      description:
+        'Pomagamo pri strukturi sporočil in komunikaciji storitev, sprememb in digitalnih projektov, kjer je ključna jasnost.',
+    },
+  ],
+},
   whyCherryBit: {
     headingPre: 'Zakaj ',
     headingPost: '?',
@@ -499,47 +499,47 @@ const de: Translations = {
       },
     ],
   },
-  services: {
-    heading: 'Was wir tun',
-    body: 'Umfassende Unterstützung für moderne Betriebsabläufe. Strategie, Umsetzung und alles dazwischen.',
-    items: [
-      {
-        title: 'Operations-Beratung',
-        description:
-          'Engpässe diagnostizieren, Prozesse neu gestalten und Systeme implementieren, die mit Ihrem Team skalieren.',
-      },
-      {
-        title: 'Workflow-Optimierung',
-        description:
-          'Den Arbeitsfluss in Ihrer Organisation optimieren. Weniger Reibung, mehr Output.',
-      },
-      {
-        title: 'KI-Strategie & Implementierung',
-        description:
-          'Echte KI-Integration – kein Hype. Maßgeschneiderte Modelle, Automatisierung und intelligente Tools.',
-      },
-      {
-        title: 'Individuelle Softwareentwicklung',
-        description:
-          'Maßgeschneiderte Tools für Ihre genauen Anforderungen. Von internen Dashboards bis zu Kundenplattformen.',
-      },
-      {
-        title: 'Daten & Integration',
-        description:
-          'Ihre Systeme verbinden. Daten bereinigen. Alles miteinander kommunizieren lassen.',
-      },
-      {
-        title: 'Prozessautomatisierung',
-        description:
-          'Wiederkehrende Arbeit automatisieren, damit sich Ihr Team auf das Wesentliche konzentrieren kann.',
-      },
-      {
-        title: 'Leistungskennzahlen',
-        description:
-          'Dashboards und KPIs einrichten, die echten Einblick in das Funktionieren geben.',
-      },
-    ],
-  },
+services: {
+  heading: 'Was wir tun',
+  body: 'CherryBit unterstützt Unternehmen dabei, Abläufe zu verbessern, Workflows neu zu gestalten, KI pragmatisch einzuführen und digitale Werkzeuge für die tägliche Umsetzung aufzubauen.',
+  items: [
+    {
+      title: 'Operations- & Workflow-Beratung',
+      description:
+        'Wir analysieren Betriebsmodelle, Service-Workflows, Verantwortlichkeiten und Delivery-Logiken, um Klarheit, Geschwindigkeit und Kontrolle zu verbessern.',
+    },
+    {
+      title: 'Prozessoptimierung',
+      description:
+        'Wir identifizieren Engpässe, reduzieren Reibung zwischen Teams und gestalten Prozesse für eine konsistentere Umsetzung neu.',
+    },
+    {
+      title: 'KI-Strategie & Beratung',
+      description:
+        'Wir definieren praktische KI-Anwendungsfälle für Support-, Knowledge- und Kommunikationsprozesse mit klarem Business-Nutzen.',
+    },
+    {
+      title: 'Digitale Workflow-Lösungen',
+      description:
+        'Wir konzipieren und entwickeln interne Tools, Dashboards, Portale und Workflow-Anwendungen für das operative Tagesgeschäft.',
+    },
+    {
+      title: 'Individuelle Softwareentwicklung',
+      description:
+        'Wir entwickeln maßgeschneiderte Softwarelösungen für operative, servicebezogene und produktbezogene Anforderungen statt Teams in generische Tools zu zwingen.',
+    },
+    {
+      title: 'Front-End- & UX-Umsetzung',
+      description:
+        'Wir liefern klare, wartbare und workflow-orientierte Oberflächen für Business-Anwendungen und interne Systeme.',
+    },
+    {
+      title: 'Kommunikationsunterstützung',
+      description:
+        'Wir helfen bei der Struktur von Botschaften und Kommunikation rund um Services, Veränderungen und digitale Projekte, bei denen Klarheit entscheidend ist.',
+    },
+  ],
+},
   whyCherryBit: {
     headingPre: 'Warum ',
     headingPost: '?',
