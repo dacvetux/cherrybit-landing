@@ -196,30 +196,32 @@ whyCherryBit: {
   svgDeploy: 'Implement',
   deployLetter: 'M',
 },
-  process: {
-    heading: 'How we work',
-    body: 'A proven process that takes you from chaos to clarity in weeks, not months.',
-    steps: [
-      {
-        title: 'Assess',
-        description:
-          'Deep dive into your current operations, pain points, and goals.',
-      },
-      {
-        title: 'Define',
-        description:
-          'Clear roadmap with priorities, timelines, and deliverables.',
-      },
-      {
-        title: 'Build',
-        description: 'Hands-on development of tools, workflows, and systems.',
-      },
-      {
-        title: 'Scale',
-        description: 'Launch, train your team, and optimize for growth.',
-      },
-    ],
-  },
+process: {
+  heading: 'How we work',
+  body: 'A structured engagement model that moves from operational assessment to practical implementation and measurable improvement.',
+  steps: [
+    {
+      title: 'Assess',
+      description:
+        'We review operations, workflows, tools and pain points to understand where complexity, delays and friction are created.',
+    },
+    {
+      title: 'Define',
+      description:
+        'We set priorities, define the right use cases and align on scope, outcomes and the most suitable delivery model.',
+    },
+    {
+      title: 'Build / Improve',
+      description:
+        'We redesign workflows, introduce supporting structures or build digital solutions that improve day-to-day execution.',
+    },
+    {
+      title: 'Scale',
+      description:
+        'We refine, measure and extend what works so teams can operate with more consistency, clarity and control.',
+    },
+  ],
+},
   contact: {
     heading: "Let's talk about your operations",
     body: "Ready to optimize your workflows? Fill out the form below and we'll get back to you within 24 hours.",
@@ -375,30 +377,32 @@ whyCherryBit: {
   svgDeploy: 'Implementacija',
   deployLetter: 'M',
 },
-  process: {
-    heading: 'Kako delujemo',
-    body: 'Preizkušen proces, ki vas v tednih, ne mesecih, pripelje od kaosa do jasnosti.',
-    steps: [
-      {
-        title: 'Ocena',
-        description:
-          'Poglobimo se v vaše trenutne operacije, bolečine in cilje.',
-      },
-      {
-        title: 'Definiranje',
-        description: 'Jasen načrt s prioritetami, časovnicami in rezultati.',
-      },
-      {
-        title: 'Gradnja',
-        description: 'Neposreden razvoj orodij, delovnih tokov in sistemov.',
-      },
-      {
-        title: 'Skaliranje',
-        description:
-          'Zagotovimo, usposobimo vašo ekipo in optimiziramo za rast.',
-      },
-    ],
-  },
+process: {
+  heading: 'Kako delujemo',
+  body: 'Strukturiran model sodelovanja, ki vodi od analize operacij do praktične implementacije in merljivih izboljšav.',
+  steps: [
+    {
+      title: 'Analiza',
+      description:
+        'Pregledamo operacije, workflowe, orodja in boleče točke, da razumemo, kje nastajajo kompleksnost, zamude in trenja.',
+    },
+    {
+      title: 'Opredelitev',
+      description:
+        'Določimo prioritete, opredelimo prave use case-e ter uskladimo obseg, cilje in najprimernejši delivery model.',
+    },
+    {
+      title: 'Izvedba / Izboljšava',
+      description:
+        'Preoblikujemo workflowe, uvedemo podporne strukture ali razvijemo digitalne rešitve, ki izboljšajo vsakodnevno izvedbo.',
+    },
+    {
+      title: 'Nadgradnja',
+      description:
+        'Izboljšave dodatno optimiziramo, merimo učinke in širimo tisto, kar deluje, da ekipe pridobijo več konsistentnosti, jasnosti in nadzora.',
+    },
+  ],
+},
   contact: {
     heading: 'Pogovorimo se o vaših operacijah',
     body: 'Pripravljeni optimizirati vaše delovne tokove? Izpolnite spodnji obrazec in odgovorili vam bomo v 24 urah.',
@@ -553,31 +557,32 @@ whyCherryBit: {
   svgDeploy: 'Umsetzen',
   deployLetter: 'U',
 },
-  process: {
-    heading: 'Wie wir arbeiten',
-    body: 'Ein bewährter Prozess, der Sie in Wochen, nicht Monaten, vom Chaos zur Klarheit führt.',
-    steps: [
-      {
-        title: 'Analyse',
-        description:
-          'Tiefe Einblicke in Ihre aktuellen Abläufe, Schmerzpunkte und Ziele.',
-      },
-      {
-        title: 'Definieren',
-        description:
-          'Klare Roadmap mit Prioritäten, Zeitplänen und Lieferergebnissen.',
-      },
-      {
-        title: 'Aufbauen',
-        description:
-          'Praktische Entwicklung von Tools, Workflows und Systemen.',
-      },
-      {
-        title: 'Skalieren',
-        description: 'Starten, Ihr Team schulen und für Wachstum optimieren.',
-      },
-    ],
-  },
+process: {
+  heading: 'Wie wir arbeiten',
+  body: 'Ein strukturiertes Vorgehensmodell, das von der operativen Analyse zur praktischen Umsetzung und messbaren Verbesserung führt.',
+  steps: [
+    {
+      title: 'Analyse',
+      description:
+        'Wir prüfen Abläufe, Workflows, Tools und Pain Points, um zu verstehen, wo Komplexität, Verzögerungen und Reibung entstehen.',
+    },
+    {
+      title: 'Definition',
+      description:
+        'Wir setzen Prioritäten, definieren die richtigen Use Cases und stimmen Umfang, Ziele und das passende Delivery-Modell ab.',
+    },
+    {
+      title: 'Umsetzen / Verbessern',
+      description:
+        'Wir gestalten Workflows neu, führen unterstützende Strukturen ein oder entwickeln digitale Lösungen für eine bessere tägliche Umsetzung.',
+    },
+    {
+      title: 'Skalieren',
+      description:
+        'Wir verfeinern, messen und erweitern, was funktioniert, damit Teams mit mehr Konsistenz, Klarheit und Kontrolle arbeiten können.',
+    },
+  ],
+},
   contact: {
     heading: 'Lassen Sie uns über Ihre Abläufe sprechen',
     body: 'Bereit, Ihre Workflows zu optimieren? Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden.',
