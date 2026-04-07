@@ -1,6 +1,7 @@
 import { LanguageProvider } from '../i18n/LanguageContext';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { TechCarousel } from './components/TechCarousel';
 import { ValueProposition } from './components/ValueProposition';
 import { Services } from './components/Services';
 import { WhyCherryBit } from './components/WhyCherryBit';
@@ -15,6 +16,7 @@ export default function App() {
       <div className="min-h-screen bg-white">
         <Navbar />
         <Hero />
+        <TechCarousel />
         <ValueProposition />
         <Services />
         <WhyCherryBit />
