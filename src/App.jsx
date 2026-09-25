@@ -2,6 +2,7 @@ import { destinations } from './content.js';
 import { useEffect, useRef, useState } from 'react';
 const logo = '/cherrybit-logo.png';
 import Cursor from './Cursor';
+import ContactForm from './ContactForm.jsx';
 import './styles_v2.css';
 
 const opening = 'Serious engineering.';
@@ -48,7 +49,7 @@ export default function App() {
       const destination = window.location.hash.slice(1) || 'top';
       // A fresh visit still starts at the Enter screen; history can return home.
       if (!event && !window.location.hash) return;
-      if (destination === 'top' || destinations.some(({ id }) => id === destination)) {
+      if (destination === 'top' || destination === 'contact' || destinations.some(({ id }) => id === destination)) {
         setView(destination);
         setLength(headline.length);
         setPhase('ready');
@@ -109,25 +110,6 @@ export default function App() {
   return (
     <div className={`experience is-${phase} view-${view}`}>
       <Cursor />
-      {view === 'top' && (
-        <header
-          className="hero-identity"
-          inert={phase !== 'ready'}
-          aria-hidden={phase !== 'ready'}
-        >
-          <a
-            className="hero-brand"
-            href="#top"
-            aria-label="CherryBit home"
-            onClick={(event) => navigate(event, 'top')}
-          >
-            <img src={logo} alt="" width="64" height="64" />
-          </a>
-          <a className="hero-contact" href="mailto:hello@cherrybit.dev">
-            Let’s talk <span aria-hidden="true">↗</span>
-          </a>
-        </header>
-      )}
       {phase === 'intro' && (
         <div className="entry-screen">
           <button className="entry-button" onClick={() => setPhase('entering')}>
@@ -146,6 +128,8 @@ export default function App() {
             inert={view !== 'top'}
           >
             <section id="top" className="headline-stage">
+              <div className="headline-group">
+                <img className="headline-logo" src={logo} alt="CherryBit" width="100" height="100" />
               <h1 aria-label="Serious engineering. With a cherry on top.">
                 <span className="headline-visual" aria-hidden="true">
                   {/* Reserve the final text's space so typing never shifts the layout. */}
@@ -175,12 +159,16 @@ export default function App() {
                   </span>
                 </span>
               </h1>
+              </div>
                 <nav
                   className="direction-navigation"
                   aria-label="Explore CherryBit"
                   inert={phase !== 'ready'}
                   aria-hidden={phase !== 'ready'}
                 >
+                  <a className="direction-link direction-contact" href="#contact" onClick={(event) => navigate(event, 'contact')}>
+                    Let’s talk <span aria-hidden="true">↑</span>
+                  </a>
                   <a
                     className="direction-link direction-work"
                     href="#work"
@@ -205,6 +193,20 @@ export default function App() {
                 </nav>
             </section>
           </main>
+          <section id="contact" className="destination-panel panel-contact" inert={view !== 'contact'} tabIndex={-1}
+            aria-labelledby="contact-title" ref={(element) => { panels.current.contact = element; }}>
+            <a className="back-link" href="#top" onClick={(event) => navigate(event, 'top')}>
+              <span aria-hidden="true">↓</span>Back to home
+            </a>
+            <div className="destination-content">
+              <div className="destination-body contact-body">
+                <p className="destination-label">Start a conversation</p>
+                <h2 id="contact-title">Let’s talk.</h2>
+                <p className="destination-intro">Tell us what you’re building and how we can help.</p>
+                <ContactForm />
+              </div>
+            </div>
+          </section>
           {destinations.map(({ id, label, title, intro, items }) => (
             <section
               key={id}

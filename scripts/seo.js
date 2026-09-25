@@ -11,12 +11,16 @@ export function staticContent() {
     h('img', { src: '/cherrybit-logo.png', alt: 'CherryBit', width: 80, height: 80 }),
     h('h1', null, 'Serious engineering. With a cherry on top.'),
     h('p', null, description),
-    h('nav', { 'aria-label': 'Explore CherryBit' }, destinations.map(({ id, label }) =>
-      h('a', { key: id, href: `#${id}` }, label))),
+    h('nav', { 'aria-label': 'Explore CherryBit' },
+      h('a', { href: '#contact' }, 'Let’s talk'),
+      destinations.map(({ id, label }) => h('a', { key: id, href: `#${id}` }, label))),
     ...destinations.map(({ id, label, title, intro, items }) => h('section', { key: id, id },
       h('p', null, label), h('h2', null, title), h('p', null, intro),
       ...items.map(([name, body]) => h('article', { key: name }, h('h3', null, name), h('p', null, body))))),
-    h('a', { href: 'mailto:hello@cherrybit.dev' }, 'Let’s talk — hello@cherrybit.dev')));
+    h('section', { id: 'contact' },
+      h('h2', null, 'Let’s talk.'),
+      h('p', null, 'Tell us what you’re building and how we can help.'),
+      h('a', { href: 'mailto:hello@cherrybit.dev' }, 'Email hello@cherrybit.dev'))));
 }
 
 export function seoPlugin() {
