@@ -32,6 +32,11 @@ button {
   align-items: center;
   gap: 24px;
   visibility: hidden;
+  opacity: 0;
+  translate: 0 -12px;
+  transition:
+    opacity 800ms cubic-bezier(0.22, 1, 0.36, 1) 120ms,
+    translate 1000ms cubic-bezier(0.22, 1, 0.36, 1) 120ms;
   pointer-events: none;
 }
 .hero-identity > * {
@@ -39,7 +44,8 @@ button {
 }
 .is-ready .hero-identity {
   visibility: visible;
-  animation: identity-reveal 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  opacity: 1;
+  translate: 0 0;
 }
 .hero-brand {
   display: flex;
@@ -81,16 +87,6 @@ button {
 .hero-contact:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 5px;
-}
-@keyframes identity-reveal {
-  from {
-    transform: translateY(-24px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 .entry-screen {
   min-height: 100svh;
@@ -183,10 +179,13 @@ h1 em {
   text-align: center;
 }
 .typing-cursor {
+  /* Do not change centered text width or wrapping when the cursor disappears. */
+  position: absolute;
   display: inline-block;
   height: 0.8em;
   width: 2px;
   margin-left: 0.08em;
+  margin-top: 0.18em;
   background: var(--cherry);
   animation: blink 850ms step-end infinite;
 }
@@ -206,7 +205,8 @@ h1 em {
 .page-viewport {
   position: fixed;
   inset: 0;
-  overflow: hidden;
+  /* Clip offscreen panels without allowing anchor/history scrolling. */
+  overflow: clip;
   background: var(--dark);
 }
 .home-panel,
@@ -236,6 +236,12 @@ h1 em {
 .headline-layout {
   text-align: center;
 }
+.direction-navigation {
+  /* Navigation must never participate in the headline's centering layout. */
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
 .direction-link {
   position: absolute;
   display: inline-flex;
@@ -247,7 +253,19 @@ h1 em {
   font-size: 13px;
   letter-spacing: 0.08em;
   white-space: nowrap;
-  transition: color 250ms ease;
+  opacity: 0;
+  visibility: hidden;
+  translate: var(--reveal-x, 0) var(--reveal-y, 0);
+  transition:
+    color 250ms ease,
+    opacity 800ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay),
+    translate 1000ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay);
+}
+.is-ready .direction-link {
+  visibility: visible;
+  opacity: 1;
+  translate: 0 0;
+  pointer-events: auto;
 }
 .direction-link span {
   transition: translate 250ms ease;
@@ -257,16 +275,22 @@ h1 em {
   translate: 0 -4px;
 }
 .direction-work {
+  --reveal-x: -12px;
+  --reveal-delay: 200ms;
   left: 50px;
   top: 50%;
   transform: translate(-50%, -50%) rotate(-90deg);
 }
 .direction-expertise {
+  --reveal-x: 12px;
+  --reveal-delay: 300ms;
   right: 50px;
   top: 50%;
   transform: translate(50%, -50%) rotate(90deg);
 }
 .direction-services {
+  --reveal-y: 12px;
+  --reveal-delay: 400ms;
   bottom: 32px;
   left: 50%;
   transform: translateX(-50%);

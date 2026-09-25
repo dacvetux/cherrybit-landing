@@ -9,6 +9,13 @@ const continuation = 'With a ';
 const cherry = 'cherry on top.';
 const headline = opening + continuation + cherry;
 
+function updateSectionUrl(destination) {
+  const hash = `#${destination}`;
+  if (window.location.hash !== hash) {
+    // Preserve history without native anchor scrolling fighting panel transforms.
+    window.history.pushState(null, '', hash);
+  }
+}
 
 export default function App() {
   const [phase, setPhase] = useState('intro');
@@ -20,7 +27,7 @@ export default function App() {
   function navigate(event, destination) {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
     event.preventDefault();
-    window.location.hash = destination;
+    updateSectionUrl(destination);
     setView(destination);
   }
 
@@ -37,8 +44,10 @@ export default function App() {
   }, [view, phase]);
 
   useEffect(() => {
-    const syncHash = () => {
-      const destination = window.location.hash.slice(1);
+    const syncHash = (event) => {
+      const destination = window.location.hash.slice(1) || 'top';
+      // A fresh visit still starts at the Enter screen; history can return home.
+      if (!event && !window.location.hash) return;
       if (destination === 'top' || destinations.some(({ id }) => id === destination)) {
         setView(destination);
         setLength(headline.length);
@@ -47,13 +56,17 @@ export default function App() {
     };
     syncHash();
     window.addEventListener('hashchange', syncHash);
-    return () => window.removeEventListener('hashchange', syncHash);
+    window.addEventListener('popstate', syncHash);
+    return () => {
+      window.removeEventListener('hashchange', syncHash);
+      window.removeEventListener('popstate', syncHash);
+    };
   }, []);
 
   useEffect(() => {
     const onKeyDown = (event) => {
       if (event.key === 'Escape') {
-        window.location.hash = 'top';
+        updateSectionUrl('top');
         setView('top');
       }
     };
@@ -162,10 +175,11 @@ export default function App() {
                   </span>
                 </span>
               </h1>
-              {phase === 'ready' && (
                 <nav
                   className="direction-navigation"
                   aria-label="Explore CherryBit"
+                  inert={phase !== 'ready'}
+                  aria-hidden={phase !== 'ready'}
                 >
                   <a
                     className="direction-link direction-work"
@@ -189,7 +203,6 @@ export default function App() {
                     Expertise <span aria-hidden="true">↑</span>
                   </a>
                 </nav>
-              )}
             </section>
           </main>
           {destinations.map(({ id, label, title, intro, items }) => (
@@ -234,4 +247,3 @@ export default function App() {
     </div>
   );
 }
-

@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="theme-color" content="#0b0912" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html { background: #f6f3f0; }
+      html.app-loading #root > .static-page { display: none; }
+    </style>
+    <script>
+      // Run before the body can paint; React replaces the static fallback.
+      document.documentElement.classList.add('app-loading');
+      // Restore readable content if the application bundle fails to load.
+      window.setTimeout(() => {
+        document.documentElement.classList.remove('app-loading');
+      }, 10000);
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
