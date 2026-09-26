@@ -673,6 +673,11 @@ h1 em {
   align-items: center;
   gap: 12px;
 }
+@media (min-width: 1101px) {
+  .navigation-content > span[aria-hidden="true"] {
+    display: none;
+  }
+}
 .direction-link {
   justify-content: center;
 }
