@@ -1,7 +1,8 @@
 import { destinations } from './content.js';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 const logo = '/cherrybit-logo.png';
 import Cursor from './Cursor';
+import useSwipeNavigation from './useSwipeNavigation.js';
 import ContactForm from './ContactForm.jsx';
 import './styles_v2.css';
 
@@ -24,6 +25,12 @@ export default function App() {
   const page = useRef(null);
   const [view, setView] = useState('top');
   const panels = useRef({});
+  const viewport = useRef(null);
+  const changeView = useCallback((destination) => {
+    updateSectionUrl(destination);
+    setView(destination);
+  }, []);
+  useSwipeNavigation(viewport, view, phase === 'ready', changeView);
 
   function navigate(event, destination) {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
@@ -119,7 +126,7 @@ export default function App() {
         </div>
       )}
 
-      <div className="page-viewport" inert={phase === 'intro'} aria-hidden={phase === 'intro'}>
+      <div ref={viewport} className="page-viewport" inert={phase === 'intro'} aria-hidden={phase === 'intro'}>
           <main
             className="revealed-page home-panel"
             ref={page}
