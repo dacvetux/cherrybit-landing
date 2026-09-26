@@ -17,6 +17,13 @@
 body {
   margin: 0;
 }
+html.app-mounted,
+html.app-mounted body,
+html.app-mounted #root {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
 button {
   font: inherit;
 }
