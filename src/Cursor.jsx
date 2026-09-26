@@ -16,7 +16,9 @@ export default function Cursor() {
 
     const hide = () => {
       visible = false;
-      element.classList.remove('is-visible', 'is-hovering');
+      element.classList.remove('is-visible', 'is-hovering', 'is-navigation');
+      delete element.dataset.direction;
+      delete element.dataset.tone;
       document.documentElement.classList.remove('custom-cursor-active');
       cancelAnimationFrame(frame);
       frame = 0;
@@ -28,6 +30,15 @@ export default function Cursor() {
       element.style.transform = `translate3d(${x}px, ${y}px, 0)`;
       // Hit-test during page transitions, even if the mouse stays still.
       const target = document.elementFromPoint(targetX, targetY);
+      const navigation = target?.closest('[data-cursor-direction]');
+      element.classList.toggle('is-navigation', Boolean(navigation));
+      if (navigation) {
+        element.dataset.direction = navigation.dataset.cursorDirection;
+        element.dataset.tone = navigation.dataset.cursorTone;
+      } else {
+        delete element.dataset.direction;
+        delete element.dataset.tone;
+      }
       element.classList.toggle('is-hovering', Boolean(target?.closest('a, button, [role="button"]')));
       frame = requestAnimationFrame(draw);
     };
@@ -67,5 +78,10 @@ export default function Cursor() {
     };
   }, []);
 
-  return <div className="custom-cursor" ref={cursor} aria-hidden="true"><span /></div>;
+  return <div className="custom-cursor" ref={cursor} aria-hidden="true">
+    <span />
+    <svg className="cursor-arrow" viewBox="0 0 32 32" fill="none">
+      <path d="M6 16h20M18 8l8 8-8 8" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  </div>;
 }

@@ -144,38 +144,38 @@ export default function App() {
                   inert={phase !== 'ready'}
                   aria-hidden={phase !== 'ready'}
                 >
-                  <a className="direction-link direction-contact" href="#contact" onClick={(event) => navigate(event, 'contact')}>
+                  <a className="direction-link direction-contact" data-cursor-direction="up" data-cursor-tone="white" href="#contact" onClick={(event) => navigate(event, 'contact')}><div className="navigation-content">
                     Let’s talk <span aria-hidden="true">↑</span>
-                  </a>
+                  </div></a>
                   <a
-                    className="direction-link direction-work"
+                    className="direction-link direction-work" data-cursor-direction="left" data-cursor-tone="white"
                     href="#work"
                     onClick={(event) => navigate(event, 'work')}
-                  >
+                  ><div className="navigation-content">
                     <span aria-hidden="true">←</span> Work
-                  </a>
+                  </div></a>
                   <a
-                    className="direction-link direction-services"
+                    className="direction-link direction-services" data-cursor-direction="down" data-cursor-tone="white"
                     href="#services"
                     onClick={(event) => navigate(event, 'services')}
-                  >
+                  ><div className="navigation-content">
                     What we do <span aria-hidden="true">↓</span>
-                  </a>
+                  </div></a>
                   <a
-                    className="direction-link direction-expertise"
+                    className="direction-link direction-expertise" data-cursor-direction="right" data-cursor-tone="white"
                     href="#expertise"
                     onClick={(event) => navigate(event, 'expertise')}
-                  >
+                  ><div className="navigation-content">
                     Expertise <span aria-hidden="true">→</span>
-                  </a>
+                  </div></a>
                 </nav>
             </section>
           </main>
           <section id="contact" className="destination-panel panel-contact" inert={view !== 'contact'} tabIndex={-1}
             aria-labelledby="contact-title" ref={(element) => { panels.current.contact = element; }}>
-            <a className="back-link" href="#top" onClick={(event) => navigate(event, 'top')}>
+            <a className="back-link" data-cursor-direction="down" data-cursor-tone="black" href="#top" onClick={(event) => navigate(event, 'top')}><div className="navigation-content">
               <span aria-hidden="true">↓</span>Back to home
-            </a>
+            </div></a>
             <div className="destination-content">
               <div className="destination-body contact-body">
                 <p className="destination-label">Start a conversation</p>
@@ -199,12 +199,14 @@ export default function App() {
             >
               <a
                 className="back-link"
+                data-cursor-direction={id === 'work' ? 'right' : id === 'expertise' ? 'left' : 'up'}
+                data-cursor-tone={id === 'work' ? 'black' : 'white'}
                 href="#top"
                 onClick={(event) => navigate(event, 'top')}
-              >
+              ><div className="navigation-content">
                 <span aria-hidden="true">{id === 'work' ? '→' : id === 'expertise' ? '←' : '↑'}</span>
                 Back to home
-              </a>
+              </div></a>
               <div className="destination-content">
                 <div className="destination-body">
                   <p className="destination-label">{label}</p>
