@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 const logo = '/cherrybit-logo.png';
 import Cursor from './Cursor';
 import useSwipeNavigation from './useSwipeNavigation.js';
+import useWheelNavigation from './useWheelNavigation.js';
 import ContactForm from './ContactForm.jsx';
 import './styles_v2.css';
 
@@ -20,7 +21,7 @@ function updateSectionUrl(destination) {
 }
 
 export default function App() {
-  const [phase, setPhase] = useState('intro');
+  const [phase, setPhase] = useState('typing');
   const [length, setLength] = useState(0);
   const page = useRef(null);
   const [view, setView] = useState('top');
@@ -31,6 +32,7 @@ export default function App() {
     setView(destination);
   }, []);
   useSwipeNavigation(viewport, view, phase === 'ready', changeView);
+  useWheelNavigation(viewport, view, phase === 'ready', changeView);
 
   function navigate(event, destination) {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
@@ -54,7 +56,7 @@ export default function App() {
   useEffect(() => {
     const syncHash = (event) => {
       const destination = window.location.hash.slice(1) || 'top';
-      // A fresh visit still starts at the Enter screen; history can return home.
+      // A fresh visit starts typing; history can return directly home.
       if (!event && !window.location.hash) return;
       if (destination === 'top' || destination === 'contact' || destinations.some(({ id }) => id === destination)) {
         setView(destination);
@@ -83,26 +85,6 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    if (phase !== 'entering') return;
-    const reducedMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)',
-    ).matches;
-    const timer = window.setTimeout(
-      () => {
-        if (reducedMotion) {
-          setLength(headline.length);
-          setPhase('ready');
-        } else {
-          setPhase('typing');
-        }
-        page.current?.focus({ preventScroll: true });
-      },
-      reducedMotion ? 0 : 1100,
-    );
-    return () => window.clearTimeout(timer);
-  }, [phase]);
-
-  useEffect(() => {
     if (phase !== 'typing') return;
     const timer = window.setTimeout(() => {
       const nextLength = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -117,16 +99,7 @@ export default function App() {
   return (
     <div className={`experience is-${phase} view-${view}`}>
       <Cursor />
-      {phase === 'intro' && (
-        <div className="entry-screen">
-          <button className="entry-button" onClick={() => setPhase('entering')}>
-            <img src={logo} alt="CherryBit" width="144" height="144" />
-            <span>Enter</span>
-          </button>
-        </div>
-      )}
-
-      <div ref={viewport} className="page-viewport" inert={phase === 'intro'} aria-hidden={phase === 'intro'}>
+      <div ref={viewport} className="page-viewport">
           <main
             className="revealed-page home-panel"
             ref={page}
@@ -181,7 +154,7 @@ export default function App() {
                     href="#work"
                     onClick={(event) => navigate(event, 'work')}
                   >
-                    Work <span aria-hidden="true">↑</span>
+                    <span aria-hidden="true">←</span> Work
                   </a>
                   <a
                     className="direction-link direction-services"
@@ -195,7 +168,7 @@ export default function App() {
                     href="#expertise"
                     onClick={(event) => navigate(event, 'expertise')}
                   >
-                    Expertise <span aria-hidden="true">↑</span>
+                    Expertise <span aria-hidden="true">→</span>
                   </a>
                 </nav>
             </section>
@@ -231,7 +204,7 @@ export default function App() {
                 href="#top"
                 onClick={(event) => navigate(event, 'top')}
               >
-                <span aria-hidden="true">↑</span>
+                <span aria-hidden="true">{id === 'work' ? '→' : id === 'expertise' ? '←' : '↑'}</span>
                 Back to home
               </a>
               <div className="destination-content">
