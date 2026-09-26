@@ -3,7 +3,6 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 const logo = '/cherrybit-logo.png';
 import Cursor from './Cursor';
 import useSwipeNavigation from './useSwipeNavigation.js';
-import useWheelNavigation from './useWheelNavigation.js';
 import ContactForm from './ContactForm.jsx';
 import './styles_v2.css';
 
@@ -32,7 +31,6 @@ export default function App() {
     setView(destination);
   }, []);
   useSwipeNavigation(viewport, view, phase === 'ready', changeView);
-  useWheelNavigation(viewport, view, phase === 'ready', changeView);
 
   function navigate(event, destination) {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
