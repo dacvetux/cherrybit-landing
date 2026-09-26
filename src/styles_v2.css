@@ -158,7 +158,6 @@ h1 em {
   border-radius: 50%;
   font-size: 20px;
   line-height: 1;
-  display: none;
   transition:
     translate 300ms ease,
     border-color 300ms ease,
