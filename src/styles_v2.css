@@ -785,3 +785,17 @@ h1 em {
     right: 0;
   }
 }
+
+/* Establish the four spatial destinations before the headline starts typing. */
+.panel-work { --panel-rest: translateX(-100%); --panel-intro-delay: 200ms; }
+.panel-services { --panel-rest: translateY(100%); --panel-intro-delay: 100ms; }
+.panel-expertise { --panel-rest: translateX(100%); --panel-intro-delay: 0ms; }
+.panel-contact { --panel-rest: translateY(-100%); --panel-intro-delay: 300ms; }
+.is-arranging .destination-panel {
+  animation: arrange-panel 1100ms cubic-bezier(0.65, 0, 0.25, 1) var(--panel-intro-delay) both;
+  pointer-events: none;
+}
+@keyframes arrange-panel {
+  from { transform: translate(0, 0); }
+  to { transform: var(--panel-rest); }
+}

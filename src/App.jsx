@@ -20,7 +20,7 @@ function updateSectionUrl(destination) {
 }
 
 export default function App() {
-  const [phase, setPhase] = useState('typing');
+  const [phase, setPhase] = useState('arranging');
   const [length, setLength] = useState(0);
   const page = useRef(null);
   const [view, setView] = useState('top');
@@ -81,6 +81,13 @@ export default function App() {
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
   }, []);
+
+  useEffect(() => {
+    if (phase !== 'arranging') return;
+    const timer = window.setTimeout(() => setPhase('typing'),
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 1400);
+    return () => window.clearTimeout(timer);
+  }, [phase]);
 
   useEffect(() => {
     if (phase !== 'typing') return;
