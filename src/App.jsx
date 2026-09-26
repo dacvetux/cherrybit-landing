@@ -30,6 +30,15 @@ export default function App() {
   const [view, setView] = useState('top');
   const panels = useRef({});
   const viewport = useRef(null);
+  const finishedIntroPanels = useRef(new Set());
+  function finishPanelIntro(event) {
+    if (phase !== 'arranging' || event.animationName !== 'arrange-panel'
+      || !event.target.classList.contains('destination-panel')) return;
+    finishedIntroPanels.current.add(event.target.id);
+    if (finishedIntroPanels.current.size === destinations.length + 1) {
+      setPhase((current) => current === 'arranging' ? 'typing' : current);
+    }
+  }
   const changeView = useCallback((destination) => {
     updateSectionUrl(destination);
     setView(destination);
@@ -90,7 +99,11 @@ export default function App() {
     if (phase !== 'covering') return;
     let timer;
     const start = () => {
-      timer = window.setTimeout(() => setPhase('arranging'),
+      window.clearTimeout(timer);
+      timer = window.setTimeout(() => {
+        finishedIntroPanels.current.clear();
+        setPhase((current) => current === 'covering' ? 'arranging' : current);
+      },
         window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 450);
     };
     if (document.readyState === 'complete') start();
@@ -103,9 +116,20 @@ export default function App() {
 
   useEffect(() => {
     if (phase !== 'arranging') return;
-    const timer = window.setTimeout(() => setPhase('typing'),
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 1400);
-    return () => window.clearTimeout(timer);
+    // Disabled CSS animations do not emit animationend events.
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let timer;
+    const skipAnimation = () => {
+      if (motion.matches) timer = window.setTimeout(() => {
+        setPhase((current) => current === 'arranging' ? 'typing' : current);
+      }, 0);
+    };
+    skipAnimation();
+    motion.addEventListener('change', skipAnimation);
+    return () => {
+      window.clearTimeout(timer);
+      motion.removeEventListener('change', skipAnimation);
+    };
   }, [phase]);
 
   useEffect(() => {
@@ -124,7 +148,7 @@ export default function App() {
     <div className={`experience is-${phase} view-${view}`}>
       <div className="startup-overlay" aria-hidden="true" />
       <Cursor />
-      <div ref={viewport} className="page-viewport">
+      <div ref={viewport} className="page-viewport" onAnimationEnd={finishPanelIntro}>
           <main
             className="revealed-page home-panel"
             ref={page}

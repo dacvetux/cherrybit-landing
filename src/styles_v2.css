@@ -820,7 +820,12 @@ h1 em {
 .panel-contact { --panel-rest: translateY(-100%); --panel-intro-delay: 300ms; }
 .is-arranging .destination-panel {
   animation: arrange-panel 1100ms cubic-bezier(0.65, 0, 0.25, 1) var(--panel-intro-delay) both;
+  transition: none;
   pointer-events: none;
+}
+.is-typing .destination-panel {
+  /* Removing the intro keyframes must not start another transform transition. */
+  transition: none;
 }
 @keyframes arrange-panel {
   from { transform: translate(0, 0); }
