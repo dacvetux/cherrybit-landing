@@ -17,6 +17,9 @@
 body {
   margin: 0;
 }
+html.app-active body {
+  background: var(--dark);
+}
 button {
   font: inherit;
 }
@@ -207,6 +210,21 @@ h1 em {
   color: var(--dark);
   outline: none;
   overflow: hidden;
+  /* Offscreen panels must stop painting after their exit, including in
+     Safari's browser-bar background sampling. Keep them mounted for forms. */
+  visibility: hidden;
+  transition:
+    transform 850ms cubic-bezier(0.65, 0, 0.25, 1),
+    visibility 0s linear 850ms;
+}
+.destination-panel:not([inert]),
+.is-arranging .destination-panel {
+  visibility: visible;
+  transition-delay: 0s;
+}
+.is-typing .destination-panel {
+  /* The opening animation has already placed every panel offscreen. */
+  transition-delay: 0s;
 }
 .panel-work {
   background: #fff;

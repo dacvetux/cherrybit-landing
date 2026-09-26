@@ -20,6 +20,10 @@ function updateSectionUrl(destination) {
 }
 
 export default function App() {
+  useEffect(() => {
+    document.documentElement.classList.add('app-active');
+    return () => document.documentElement.classList.remove('app-active');
+  }, []);
   const [phase, setPhase] = useState('arranging');
   const [length, setLength] = useState(0);
   const page = useRef(null);
