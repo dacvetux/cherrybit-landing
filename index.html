@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       html { background: #f6f3f0; }
-      html.app-loading, html.app-active { background: #0b0912; }
+      html.app-loading { background: #0b0912; }
       html.app-loading #root > .static-page { display: none; }
+      html.startup-cover::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        z-index: 2147483647;
+        background: #0b0912;
+        pointer-events: none;
+      }
     </style>
     <script>
       // Run before the body can paint; React replaces the static fallback.
-      document.documentElement.classList.add('app-loading');
+      document.documentElement.classList.add('app-loading', 'startup-cover');
       // Restore readable content if the application bundle fails to load.
       window.setTimeout(() => {
-        document.documentElement.classList.remove('app-loading');
+        document.documentElement.classList.remove('app-loading', 'startup-cover');
       }, 10000);
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />

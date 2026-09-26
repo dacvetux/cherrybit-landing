@@ -21,10 +21,10 @@ function updateSectionUrl(destination) {
 
 export default function App() {
   useEffect(() => {
-    document.documentElement.classList.add('app-active');
-    return () => document.documentElement.classList.remove('app-active');
+    // Hand the pre-render cover over to the already-mounted React overlay.
+    document.documentElement.classList.remove('startup-cover');
   }, []);
-  const [phase, setPhase] = useState('arranging');
+  const [phase, setPhase] = useState('covering');
   const [length, setLength] = useState(0);
   const page = useRef(null);
   const [view, setView] = useState('top');
@@ -87,6 +87,21 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    if (phase !== 'covering') return;
+    let timer;
+    const start = () => {
+      timer = window.setTimeout(() => setPhase('arranging'),
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 450);
+    };
+    if (document.readyState === 'complete') start();
+    else window.addEventListener('load', start, { once: true });
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener('load', start);
+    };
+  }, [phase]);
+
+  useEffect(() => {
     if (phase !== 'arranging') return;
     const timer = window.setTimeout(() => setPhase('typing'),
       window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 1400);
@@ -107,6 +122,7 @@ export default function App() {
 
   return (
     <div className={`experience is-${phase} view-${view}`}>
+      <div className="startup-overlay" aria-hidden="true" />
       <Cursor />
       <div ref={viewport} className="page-viewport">
           <main

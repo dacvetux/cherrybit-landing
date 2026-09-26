@@ -17,8 +17,10 @@
 body {
   margin: 0;
 }
-html.app-active body {
-  background: var(--dark);
+/* Keep Safari's underlying browser chrome color separate from panel artwork. */
+html:has(.experience),
+body:has(.experience) {
+  background: #0b0912;
 }
 button {
   font: inherit;
@@ -210,32 +212,19 @@ h1 em {
   color: var(--dark);
   outline: none;
   overflow: hidden;
-  /* Offscreen panels must stop painting after their exit, including in
-     Safari's browser-bar background sampling. Keep them mounted for forms. */
-  visibility: hidden;
-  transition:
-    transform 850ms cubic-bezier(0.65, 0, 0.25, 1),
-    visibility 0s linear 850ms;
 }
-.destination-panel:not([inert]),
-.is-arranging .destination-panel {
-  visibility: visible;
-  transition-delay: 0s;
-}
-.is-typing .destination-panel {
-  /* The opening animation has already placed every panel offscreen. */
-  transition-delay: 0s;
-}
+/* Paint panel colors as images over a dark base instead of exposing an
+   offscreen solid color to Safari’s toolbar color heuristic. */
 .panel-work {
-  background: #fff;
+  background: linear-gradient(#fff, #fff) var(--dark);
   transform: translateX(-100%);
 }
 .panel-services {
-  background: #43e7c0;
+  background: linear-gradient(#43e7c0, #43e7c0) var(--dark);
   transform: translateY(100%);
 }
 .panel-expertise {
-  background: var(--cherry);
+  background: linear-gradient(var(--cherry), var(--cherry)) var(--dark);
   transform: translateX(100%);
 }
 .view-work .panel-work,
@@ -531,7 +520,7 @@ h1 em {
   transform: translateY(100%);
 }
 .panel-contact {
-  background: #f6f3f0;
+  background: linear-gradient(#f6f3f0, #f6f3f0) var(--dark);
   transform: translateY(-100%);
 }
 .view-contact .panel-contact {
@@ -805,6 +794,26 @@ h1 em {
 }
 
 /* Establish the four spatial destinations before the headline starts typing. */
+.startup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: var(--dark);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 650ms ease, visibility 0s linear 650ms;
+}
+.is-covering .startup-overlay {
+  opacity: 1;
+  visibility: visible;
+  transition: none;
+}
+.is-covering .destination-panel {
+  transform: translate(0, 0);
+  transition: none;
+  pointer-events: none;
+}
 .panel-work { --panel-rest: translateX(-100%); --panel-intro-delay: 200ms; }
 .panel-services { --panel-rest: translateY(100%); --panel-intro-delay: 100ms; }
 .panel-expertise { --panel-rest: translateX(100%); --panel-intro-delay: 0ms; }
