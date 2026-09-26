@@ -799,3 +799,79 @@ h1 em {
   from { transform: translate(0, 0); }
   to { transform: var(--panel-rest); }
 }
+
+/* Compact subpage rhythm, with comfortable reading and touch targets. */
+@media (max-width: 760px) {
+  .experience { --mobile-page-padding: clamp(20px, 5vw, 36px); }
+  .direction-work,
+  .direction-expertise {
+    padding-inline: var(--mobile-page-padding);
+  }
+  .direction-work { justify-content: flex-start; }
+  .direction-expertise { justify-content: flex-end; }
+  .panel-work .back-link,
+  .panel-expertise .back-link {
+    padding-inline: var(--mobile-page-padding);
+  }
+  .destination-content,
+  .panel-contact .destination-content {
+    padding: 24px var(--mobile-page-padding) 32px;
+    padding-bottom: max(32px, env(safe-area-inset-bottom, 0px));
+  }
+  .destination-body {
+    margin-block: 0;
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+  .destination-label {
+    margin-bottom: 12px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+  .destination-content h2 {
+    font-size: clamp(30px, 8vw, 42px);
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+  }
+  .destination-intro,
+  .contact-body .destination-intro {
+    margin: 18px 0 28px;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  .destination-grid { gap: 24px; }
+  .destination-grid article { padding-top: 18px; }
+  .destination-number { font-size: 11px; }
+  .destination-grid h3 {
+    margin: 12px 0 8px;
+    font-size: 20px;
+    line-height: 1.25;
+  }
+  .destination-grid p { font-size: 15px; line-height: 1.6; }
+  .back-link {
+    min-height: 64px;
+    padding: calc(12px + env(safe-area-inset-top, 0px)) 20px 12px;
+    font-size: 14px;
+  }
+  .panel-contact .back-link {
+    padding: 12px 20px calc(12px + env(safe-area-inset-bottom, 0px));
+  }
+  .back-link span { width: 34px; height: 34px; flex-basis: 34px; }
+  .contact-form fieldset { gap: 8px; }
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .contact-form textarea { min-height: 120px; }
+  .contact-form button {
+    justify-self: stretch;
+    justify-content: space-between;
+    min-height: 48px;
+    padding: 14px 18px;
+    font-size: 15px;
+  }
+  .contact-status { padding-top: 12px; }
+}
